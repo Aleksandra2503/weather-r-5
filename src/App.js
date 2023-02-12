@@ -15,21 +15,21 @@ export default function App() {
       </a>
        */}
 
-    This project was coded by Murashko Oleksandra and is{" "}
+    This project was coded by Murashko Oleksandra {" "}
             <a
               href="https://github.com/Aleksandra2503/weather-r-5"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Oleksandra Murashko on linkedin
+              open-sourced on GitHub
             </a>{" "}
-            and{" "}
+            . I am in{" "}
             <a
               href="https://www.linkedin.com/in/oleksandra-murashko-1b14a4254/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              hosted on Netlify
+               linkedin.
             </a>
       </footer>
       </div>
