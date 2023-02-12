@@ -7,6 +7,7 @@ export default function Weather(props) {
     function handleResponse(response) {
         setWeatherData({
           ready: true,
+          coordinates: response.data.coord,
           temperature: response.data.main.temp,
           humidity: response.data.main.humidity,
           date: "Wednesday 07:00",
@@ -17,7 +18,7 @@ export default function Weather(props) {
          });
     } 
     if (weatherData.ready) {
-      return(
+      return (
         <div className="Weather">
             <form>
                 <div className="row">
@@ -63,6 +64,6 @@ export default function Weather(props) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
-    return "Loading..."
+    return "Loading...";
    }
   }
