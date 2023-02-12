@@ -10,7 +10,9 @@ export default function Weather() {
     const apiKey = "6f2c8d8e771e0ede0a15520e397b527c";
     
     let city = "Murnau";
-    let apiUrl = `https://api.opepweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}}&units=metric`;
+    let apiUrl = `https://api.opepweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    
     axios.get(apiUrl).then(handleResponse);
 return(
     <div className="Weather">
