@@ -1,14 +1,24 @@
 import React from 'react';
+import axios from 'axios';
 import './Weather.css';
 
 export default function Weather() {
+    function handleResponse(response) {
+        console.log(response.data);
+
+    }
+    const apiKey = "6f2c8d8e771e0ede0a15520e397b527c";
+    
+    let city = "Murnau";
+    let apiUrl = `https://api.opepweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
 return(
     <div className="Weather">
         <form>
             <div className="row">
                 <div className="col-9">
             <input type="search" placeholder="Enter a city.."
-            className="form-control" autofocus="on"/>
+            className="form-control" autoFocus="on"/>
                 </div>
                 <div className="col-3">
                     <input type="submit" value="Search" className="btn btn-primary w-100" />
